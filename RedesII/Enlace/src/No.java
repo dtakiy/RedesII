@@ -25,32 +25,32 @@ public class No {
 
                public String getIP(int no)
                {
-                       return ips[no];
+                       return ips[no-1];
                }
 
                public void setIP(String ip, int no)
                {
-                       ips[no] = ip;
+                       ips[no-1] = ip;
                }
 
                public int getPorta(int no)
                {
-                       return portas[no];
+                       return portas[no-1];
                }
 
                public void setPorta(int porta, int no)
                {
-                       portas[no] = porta;
+                       portas[no-1] = porta;
                }
 
                public int getMTU(int no)
                {
-                       return mtus[no];
+                       return mtus[no-1];
                }
 
                public void setMTU(int mtu, int no)
                {
-                       mtus[no] = mtu;
+                       mtus[no-1] = mtu;
                }
 
                public void setIdLocal(int idLocal) {
@@ -63,7 +63,7 @@ public class No {
 
                public boolean existeEnlace(int idNo)
                {
-                       if (mtus[idNo] != 0)
+                       if (mtus[idNo-1] == 0)
                                return false;
 
                        return true;
